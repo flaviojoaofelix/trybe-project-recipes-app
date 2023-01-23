@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import profileIcon from '../../images/profileIcon.svg';
 
 const ProfileIcon = () => (
-  <Link href="/profile">
+  <Link to="/profile">
     <Image
       src={ profileIcon }
       alt="Profile"
