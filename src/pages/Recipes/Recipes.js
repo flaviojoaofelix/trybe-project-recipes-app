@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import Context from '../../context/Context';
 import fetchRecipes, { fetchCategories } from '../../services/api';
 
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
+import LayoutWrapper from '../../components/Wrapper/LayoutWrapper';
+
 import BasicCard from '../../components/BasicCard/BasicCard';
 
 function Recipes({ location: { pathname }, history }) {
@@ -48,45 +48,41 @@ function Recipes({ location: { pathname }, history }) {
   };
 
   return (
-    <>
-      <Header title={ headerTitle } />
-      <main className="footer-space">
-        <div>
-          <form className="my-2 mx-3 btn btn-md border border-3 col-auto bg-light">
-            { categories.length > 0 && categories.map(({ strCategory }, i) => (
-              <label
-                key={ i }
-                htmlFor={ `${strCategory}-category-filter` }
-                data-testid={ `${strCategory}-category-filter` }
-                className="form-check form-check-inline"
-              >
-                <input
-                  onClick={ handleCategoryChange }
-                  type="radio"
-                  name="category"
-                  value={ strCategory }
-                  id={ `${strCategory}-category-filter` }
-                  className="form-check-input"
-                />
-                {strCategory}
-              </label>
-            ))}
-          </form>
-          <div className="mx-3">
-            { recipes.length > 0 && recipes.map((recipe, i) => (
-              <BasicCard
-                { ...recipe }
-                index={ i }
-                pathname={ pathname }
-                key={ i }
-                dataTitle={ `${i}-card-name` }
+    <LayoutWrapper title={ headerTitle }>
+      <div>
+        <form className="my-2 mx-3 btn btn-md border border-3 col-auto bg-light">
+          { categories.length > 0 && categories.map(({ strCategory }, i) => (
+            <label
+              key={ i }
+              htmlFor={ `${strCategory}-category-filter` }
+              data-testid={ `${strCategory}-category-filter` }
+              className="form-check form-check-inline"
+            >
+              <input
+                onClick={ handleCategoryChange }
+                type="radio"
+                name="category"
+                value={ strCategory }
+                id={ `${strCategory}-category-filter` }
+                className="form-check-input"
               />
-            ))}
-          </div>
+              {strCategory}
+            </label>
+          ))}
+        </form>
+        <div className="mx-3">
+          { recipes.length > 0 && recipes.map((recipe, i) => (
+            <BasicCard
+              { ...recipe }
+              index={ i }
+              pathname={ pathname }
+              key={ i }
+              dataTitle={ `${i}-card-name` }
+            />
+          ))}
         </div>
-      </main>
-      <Footer />
-    </>
+      </div>
+    </LayoutWrapper>
   );
 }
 
