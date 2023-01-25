@@ -8,16 +8,21 @@ const MobileWrapper = ({ children }) => {
     justifyContent: 'center',
     width: '100vw',
     height: '100vh',
+    backgroundColor: '#000',
   };
 
   const mobileDivStyle = {
     width: '360px',
     height: '640px',
+    overflow: 'auto',
+    backgroundColor: '#fff',
+    border: '10px',
+    borderColor: 'yellow',
   };
 
   return (
-    <div id="main" style={ mainDivStyles }>
-      <div id="mobile" style={ mobileDivStyle }>
+    <div style={ mainDivStyles }>
+      <div style={ mobileDivStyle }>
         {children}
       </div>
     </div>
