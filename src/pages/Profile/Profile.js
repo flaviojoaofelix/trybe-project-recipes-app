@@ -32,7 +32,7 @@ function Profile({ history }) {
             { user.email }
           </h2>
         </Container>
-        <Stack gap={ 3 } id="profile-buttons" className="col-md-5 mx-auto">
+        <Stack gap={ 3 } id="profile-buttons" className="col-md-8 mx-auto">
           <ButtonDoneRecipes />
           <ButtonFavoriteRecipes />
           <ButtonLogout handleLogout={ logout } />
