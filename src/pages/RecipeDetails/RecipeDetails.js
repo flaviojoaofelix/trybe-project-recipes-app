@@ -1,18 +1,17 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 import { Button } from 'react-bootstrap';
 
-import PropTypes from 'prop-types';
 import getIngredientAndMeasureList from '../../helpers/getIngredientAndMeasureList';
 import getRecomendationApi from '../../services/getRecomendationsAPi';
 import getRecipeAPI from '../../services/getRecipeAPI';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
+import LayoutWrapper from '../../components/Wrapper/LayoutWrapper';
+
 import RecipeInfo from '../../components/RecipeInfo/RecipeInfo';
-
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-
 import BasicCard from '../../components/BasicCard/BasicCard';
 import FavoriteButton from '../../components/FavoriteButton';
 import ShareButton from '../../components/ShareButton';
@@ -79,55 +78,51 @@ function RecipeDetails({ match: { params: { id }, path }, history }) {
   };
 
   return (
-    <>
-      <Header title="Recipe Detail" />
-      <main className="footer-space">
-        <section>
-          {!recipe ? null : (
-            <div>
-              <RecipeInfo recipe={ recipe } />
-              <div className="d-flex justify-content-between m-3">
-                <FavoriteButton
-                  info={ recipe }
-                />
-                <ShareButton />
-              </div>
+    <LayoutWrapper title="Recipe">
+      <section>
+        {!recipe ? null : (
+          <div>
+            <RecipeInfo recipe={ recipe } />
+            <div className="d-flex justify-content-between m-3">
+              <FavoriteButton
+                info={ recipe }
+              />
+              <ShareButton />
             </div>
-          )}
-          <div className="recomendation">
-            {basicCards && basicCards.map((basicCard, index) => (
-              <div
-                key={ index }
-                data-testid={ `${index}-recomendation-card` }
-                className="recomendation-card ml-3"
-              >
-                <BasicCard
-                  className="recomendation-card-item"
-                  pathname={ path.includes('foods') ? '/drinks' : '/foods' }
-                  index={ index }
-                  { ...basicCard }
-                  dataTitle={ `${index}-recomendation-title` }
-                />
-              </div>
-            ))}
           </div>
-          {(isRecipeDone() === 'done') ? null : (
-            <div className="start-recipe-btn">
-              <Button
-                type="button"
-                variant="outline-warning"
-                className="start-recipe-btn col-11 mb-3"
-                data-testid="start-recipe-btn"
-                onClick={ () => history.push(`/${path
-                  .includes('food') ? 'foods' : 'drinks'}/${id}/in-progress`) }
-              >
-                { isRecipeDone() === 'inProgress' ? 'Continue Recipe' : 'Start Recipe'}
-              </Button>
-            </div>) }
-        </section>
-      </main>
-      <Footer />
-    </>
+        )}
+        <div className="recomendation">
+          {basicCards && basicCards.map((basicCard, index) => (
+            <div
+              key={ index }
+              data-testid={ `${index}-recomendation-card` }
+              className="recomendation-card ml-3"
+            >
+              <BasicCard
+                className="recomendation-card-item"
+                pathname={ path.includes('foods') ? '/drinks' : '/foods' }
+                index={ index }
+                { ...basicCard }
+                dataTitle={ `${index}-recomendation-title` }
+              />
+            </div>
+          ))}
+        </div>
+        {(isRecipeDone() === 'done') ? null : (
+          <div className="start-recipe-btn">
+            <Button
+              type="button"
+              variant="outline-warning"
+              className="start-recipe-btn col-11 mb-3"
+              data-testid="start-recipe-btn"
+              onClick={ () => history.push(`/${path
+                .includes('food') ? 'foods' : 'drinks'}/${id}/in-progress`) }
+            >
+              { isRecipeDone() === 'inProgress' ? 'Continue Recipe' : 'Start Recipe'}
+            </Button>
+          </div>) }
+      </section>
+    </LayoutWrapper>
   );
 }
 
