@@ -24,11 +24,11 @@ Projeto Front-end desenvolvido em grupo, onde utilizamos práticas **Scrum** e *
 - *Hooks*
 - *React ContextAPI*.
   
-### 3. **RTL, Jest, TDD**
+### 3. **TDD**[^4], **Jest**[^5], **RTL**[^6]
 
 - Para desenvolvimento dos testes da aplicação.
 
-### 4. **Bootstrap**
+### 4. **Bootstrap**[^7]
 
 - Para a estilização.
 
@@ -43,6 +43,10 @@ Muito obrigado ao meu grupo: [Carolina Kauark Fontes](https://github.com/Carolin
 ### Rodando
 
 Para conseguir utilizar a aplicação, você pode acessa-la diretamente pelo seguinte endereço:
+
+[https://flaviojoaofelix.github.io/trybe-project-recipes-app/](https://flaviojoaofelix.github.io/trybe-project-recipes-app/)
+
+ou
 
 [https://flaviojoaofelix.dev/trybe-project-recipes-app/](https://flaviojoaofelix.dev/trybe-project-recipes-app/)
 
@@ -1467,6 +1471,14 @@ Verifica se os atributos data-testid estão presentes na tela com suas respectiv
 
 [^1]: Resolução ideal da aplicação: 360x640 pixels
 
-[^2]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+[^2]: [Linguagem JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
-[^3]: https://reactjs.org/
+[^3]: [ReactJS Library](https://reactjs.org/)
+
+[^4]: Desenvolvimento Orientado por Testes (Test Driven Development)
+
+[^5]: [Jest Test Framework](https://jestjs.io/)
+
+[^6]: [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+[^7]: [Bootstrap frontend Toolkit](https://getbootstrap.com/)
