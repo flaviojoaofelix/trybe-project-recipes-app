@@ -14,50 +14,62 @@ Projeto Front-end desenvolvido em grupo, onde utilizamos práticas **Scrum** e *
 
 ---
 
-### Tecnologias Utilizadas no Projeto
+## Tecnologias Utilizadas no Projeto
 
-#### 1. **JavaScript**[^2]
+### 1. **JavaScript**[^2]
 
 - Como a linguagem principal do projeto.
 
-#### 2. **React**[^3]
+### 2. **React**[^3]
 
 - Como o biblioteca principal.
 - *Hooks*
 - *React ContextAPI*.
   
-#### 3. **RTL, Jest, TDD**
+### 3. **RTL, Jest, TDD**
 
 - Para desenvolvimento dos testes da aplicação.
 
-#### 4. **Bootstrap**
+### 4. **Bootstrap**
 
 - Para a estilização.
 
 ---
 
+## Agradecimentos
+
+Muito obrigado ao meu grupo: [Carolina Kauark Fontes](https://github.com/CarolinaKauark), [Geraldo Almeida](https://github.com/gralmeidan), [Igor Lungato Polido](https://github.com/polidex) e a [Trybe](https://www.betrybe.com/), escola que tem nos proporcionado essa oportunidade.
+
+---
+
 ## Como Utilizar
 
-### Aplicação ao Vivo
+### Aplicação Rodando
 
 Para conseguir utilizar a aplicação, você pode acessa-la diretamente pelo seguinte endereço:
 
 [https://flaviojoaofelix.dev/trybe-project-recipes-app/](https://flaviojoaofelix.dev/trybe-project-recipes-app/)
 
+
 ### Passos para Instalação/Configuração Local
 
 1. Faça o clone do projeto:
-```
+
+```text
 git clone git@github.com:flaviojoaofelix/trybe-project-recipes-app.git
 ```
+
 2. Instalar as dependências
-```
+
+```text
 npm install
 ```
 
 3. Acessar a aplicação rodando
-  - Basta acessar o endereço fornecido, como no exemplo abaixo:
-  ```
+
+- Basta acessar o endereço fornecido, como no exemplo abaixo:
+
+  ```text
   You can now view recipes-app-test in the browser.
 
   Local:            http://localhost:3000/trybe-project-recipes-app
@@ -66,13 +78,6 @@ npm install
   Note that the development build is not optimized.
   To create a production build, use npm run build.
   ```
-
----
-
-## Agradecimentos
-
-Muito obrigado ao meu grupo: [Carolina Kauark Fontes](https://github.com/CarolinaKauark), [Geraldo Almeida](https://github.com/gralmeidan), [Igor Lungato Polido](https://github.com/polidex) e a [Trybe](https://www.betrybe.com/), escola que tem nos proporcionado essa oportunidade.
-
 ---
 
 ## REQUISITOS DO PROJETO
@@ -1453,9 +1458,9 @@ Verifica se os atributos data-testid estão presentes na tela com suas respectiv
 
 ---
 
-### Informações adicionais e Referências
+## Informações adicionais e Referências
 
-🚧 README em construção 🚧
+### 🚧 README em construção 🚧
 
 [^1]: Resolução ideal da aplicação: 360x640 pixels
 
