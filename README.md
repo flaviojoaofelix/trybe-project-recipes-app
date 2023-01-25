@@ -74,6 +74,10 @@ npm install
 
 3. Acessar a aplicação rodando
 
+```text
+npm run start
+```
+
 - Basta acessar o endereço fornecido, como no exemplo abaixo:
 
   ```text
