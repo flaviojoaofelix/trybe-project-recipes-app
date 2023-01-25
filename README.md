@@ -4,7 +4,6 @@
 
 - *Módulo de Desenvolvimento Front-End*
 
----
 
 ## Projeto: Recipes App
 
@@ -12,7 +11,6 @@ Aplicação com foco em dispositivos móveis[^1], onde é possível acessar dive
 
 Projeto Front-end desenvolvido em grupo, onde utilizamos práticas **Scrum** e **Kanban** para gestão das atividades e organização do grupo, somadas a ferramentas como **Figma**, **Trello**, **Slack**, **Zoom** e **Github** para gestão.
 
----
 
 ## Tecnologias Utilizadas no Projeto
 
@@ -34,24 +32,29 @@ Projeto Front-end desenvolvido em grupo, onde utilizamos práticas **Scrum** e *
 
 - Para a estilização.
 
----
 
 ## Agradecimentos
 
 Muito obrigado ao meu grupo: [Carolina Kauark Fontes](https://github.com/CarolinaKauark), [Geraldo Almeida](https://github.com/gralmeidan), [Igor Lungato Polido](https://github.com/polidex) e a [Trybe](https://www.betrybe.com/), escola que tem nos proporcionado essa oportunidade.
 
----
 
 ## Como Utilizar
 
-### Aplicação Rodando
+### Rodando
 
 Para conseguir utilizar a aplicação, você pode acessa-la diretamente pelo seguinte endereço:
 
 [https://flaviojoaofelix.dev/trybe-project-recipes-app/](https://flaviojoaofelix.dev/trybe-project-recipes-app/)
 
 
-### Passos para Instalação/Configuração Local
+### Configurar Localmente
+
+#### Requisitos
+
+- [NodeJS](https://nodejs.org) (v16.x)
+- [NPM](https://www.npmjs.com/)
+
+#### Passos para Instalação/Configuração
 
 1. Faça o clone do projeto:
 
@@ -78,7 +81,7 @@ npm install
   Note that the development build is not optimized.
   To create a production build, use npm run build.
   ```
----
+
 
 ## REQUISITOS DO PROJETO
 
