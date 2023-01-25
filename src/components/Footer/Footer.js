@@ -10,8 +10,7 @@ function Footer() {
   return (
     <Navbar
       bg="light"
-      fixed="bottom"
-      className="border-top border-warning"
+      className="footer border-top border-warning"
       data-testid="footer"
     >
       <Container>
