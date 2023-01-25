@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+
+import { Button } from 'react-bootstrap';
+
 import getRecipeAPI from '../../services/getRecipeAPI';
-import ShareButton from '../../components/ShareButton';
-import FavoriteButton from '../../components/FavoriteButton';
-import RecipeInfo from '../../components/RecipeInfo/RecipeInfo';
-import getIngredientAndMeasureList from '../../helpers/getIngredientAndMeasureList';
 import useLocalStorage from '../../hooks/useLocalStorage';
+
+import getIngredientAndMeasureList from '../../helpers/getIngredientAndMeasureList';
+
+import LayoutWrapper from '../../components/Wrapper/LayoutWrapper';
+
+import RecipeInfo from '../../components/RecipeInfo/RecipeInfo';
+import FavoriteButton from '../../components/FavoriteButton';
+import ShareButton from '../../components/ShareButton';
 
 // Tem q refatorar
 async function getRecipe(setRecipe, inProgress, setInProgress, { id, path, type: ls }) {
@@ -112,7 +118,7 @@ function RecipeInProgress({ match: { params: { id }, path }, history }) {
   };
 
   return !recipe ? null : (
-    <div>
+    <LayoutWrapper title="Recipe">
       <div className="d-flex justify-content-between m-3">
         <ShareButton />
         <FavoriteButton
@@ -144,7 +150,7 @@ function RecipeInProgress({ match: { params: { id }, path }, history }) {
 
           </div>
         ) }
-    </div>
+    </LayoutWrapper>
   );
 }
 
